@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: red;
+        }
+        .editor{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+        .toolbar{
+            background-color: white;
+            width: 20%;
+            height: 100%;
+            padding: 2rem;
+            
+        }
+        .img-area{
+            background-color: rgb(72, 72, 72);
+            width: 80%;
+            height: 100%;
+            padding: 5rem;
+        }
+        #file{
+            
+        }
+
+        canvas{
+            background-color: rgb(72, 72, 72);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="editor">
+        <div class="toolbar">
+            <div class="toolbar-item">
+                <input type="file" id="file" accept="image/*">
+            </div>
+
+            <div class="toolbar-item">
+                <label for="brightness" style="display: block; margin-top: 3rem; font-size: 1.2rem;">brightness</label>
+                <input type="range" id="brightness" style="width: 15rem;" min="0" max="200" value="100">
+            </div>
+
+            <div class="toolbar-item">
+                <label for="Saturation" style="display: block; margin-top: 3rem; font-size: 1.2rem;">Saturation</label>
+                <input type="range" id="Saturation" style="width: 15rem;" min="0" max="200" value="100">
+            </div>
+
+            <div class="toolbar-item">
+                <label for="blur" style="display: block; margin-top: 3rem; font-size: 1.2rem;">blur</label>
+                <input type="range" id="blur" style="width: 15rem;" min="0" max="10" value="0" step="1">
+            </div>
+            <div class="toolbar-item">
+                <label for="Inversion" style="display: block; margin-top: 3rem; font-size: 1.2rem;">Inversion</label>
+                <input type="range" id="Inversion" style="width: 15rem;" min="0" max="100" value="0">
+            </div>
+        </div>
+        <div class="img-area">
+            <canvas></canvas>
+        </div>
+    </div>
+
+    <script src="imageEditor.js"></script>
+</body>
+</html>
